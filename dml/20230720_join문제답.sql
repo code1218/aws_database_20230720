@@ -20,7 +20,7 @@ where
 # 2번
 select
 	odt.product_id,
-    count(odt.count_number) as total_order_count,
+    sum(odt.count_number) as total_order_count,
     sum(pt.product_price) as total_product_price
 from
 	order_detail_tb odt
